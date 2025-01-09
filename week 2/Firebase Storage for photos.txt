@@ -1,0 +1,9 @@
+StorageReference storageRef = FirebaseStorage.getInstance().getReference();
+Uri file = Uri.fromFile(new File("path/to/images/rivers.jpg"));
+StorageReference photoRef = storageRef.child("photos/" + file.getLastPathSegment());
+
+photoRef.putFile(file).addOnSuccessListener(taskSnapshot -> {
+    photoRef.getDownloadUrl().addOnSuccessListener(uri -> {
+        
+    });
+});

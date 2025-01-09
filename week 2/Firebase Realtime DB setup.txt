@@ -1,0 +1,2 @@
+DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("trips");
+databaseReference.push().setValue(new Trip("1", "Paris", "Amazing trip to Paris"));
